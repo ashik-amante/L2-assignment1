@@ -13,12 +13,12 @@ In TypeScript both Interface and Type are used to define data structure. Though 
 Basaically if our data is related to object or class its better to use interface. It's easy to read and understand and we can extends it and also mix it with multiple interface
 
 example: 
-```
+```ts
 interface Person{
     name: string;
     age: number ;
 }
-interface Student extends Perosn{
+interface Student extends Person{
     roll:number;
     class: string;
 }
@@ -35,7 +35,7 @@ const sakib: Student = {
 The main difference between interface and type is in Type we can define premitive data type here.
 By using type we can easily use the union and intersaction
 
-```
+```ts
 type ProductStatus = "Available" | "Out of stock"
 type Product ={
     id:number;
@@ -49,4 +49,5 @@ const phone: Product = {
     price: 5000,
     status: "Available"
 }
+```
 
