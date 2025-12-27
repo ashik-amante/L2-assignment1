@@ -7,7 +7,7 @@ Here I will explain 2 important concept of Ts
 ---
 # Interface v Types in ts
 
-In TypeScript both Interface and Type are used to define data structure. Though both are quite same but there are some distinc difference between this two. Let's talk about them ...
+In TypeScript both Interface and Type are used to define data structure. Although both are quite similar, there are some distinct differences between them.. Let's talk about them ...
 
 ## Interface
 Basaically if our data is related to object or class its better to use interface. It's easy to read and understand and we can extends it and also mix it with multiple interface
