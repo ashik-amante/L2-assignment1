@@ -85,17 +85,18 @@ enum  StatusCode{
     ServerError = 500,
     NotFound = 400
 }
-const handleResponse = (status: StatusCode)=>{
-    if(status === Status.Success){
-        console.log('Req success')
+const handleResponse = (status: StatusCode) => {
+    if (status === StatusCode.Success) {
+        console.log('Req success');
     }
-    else if(status === Status.ServerError){
-        console.log('Server error')
+    else if (status === StatusCode.ServerError) {
+        console.log('Server error');
     }
-    else if(status === Status.NotFound){
-        console.log('Not found')
+    else if (status === StatusCode.NotFound) {
+        console.log('Not found');
     }
-}
+};
+
 
 handleResponse(StatusCode.Success) // output : Req success
 ```
