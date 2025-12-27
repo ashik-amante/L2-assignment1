@@ -13,6 +13,7 @@ In TypeScript both Interface and Type are used to define data structure. Though 
 Basaically if our data is related to object or class its better to use interface. It's easy to read and understand and we can extends it and also mix it with multiple interface
 
 example: 
+
 ```ts
 interface Person{
     name: string;
@@ -51,3 +52,73 @@ const phone: Product = {
 }
 ```
 
+
+## Question 2 
+# What is the use of enums in TypeScript? Provide an example of a numeric and string enum
+
+## Answer:
+
+We use enum (enumaration) when we want our variable will be fixed within some specific value.It helps our code more readable,maintainable and error-free.
+
+## Numeric enum
+In numeric enum the variables values are a number.It statrs from very begining and set the first variable's value 0 next will be 1 and so on.
+## Example:
+```ts
+enum Day {
+    Saturday, //0
+    Sunday, // 1
+    Monday, //2
+    Tuesday, //3
+    Wednesday, //4
+    Thursday, //5
+    Friday //6
+}
+const weekend = Day.Saturday
+```
+Here the first variable starts with default value 0 and will be increase one by one. 
+
+We can also set the value if we want like :
+
+```ts
+enum  StatusCode{
+    Success = 200,
+    ServerError = 500,
+    NotFound = 400
+}
+const handleResponse = (status: StatusCode)=>{
+    if(status === Status.Success){
+        console.log('Req success')
+    }
+    else if(status === Status.ServerError){
+        console.log('Server error')
+    }
+    else if(status === Status.NotFound){
+        console.log('Not found')
+    }
+}
+
+handleResponse(StatusCode.Success) // output : Req success
+```
+
+## String enum
+
+In string enum we have to assign explicit string for each enum.It becomes easily readable and its use in real life project so often.
+Example: 
+```ts
+enum Order{
+    Pending = "Pending",
+    Shipped = "Shipped",
+    Delivered = "Delivered"
+}
+
+const OrderStatus = (status: Order) =>{
+    if(status === Order.Delivered){
+        console.log('Ordered delivered')
+    }
+    else if(status === Order.Pending){
+        console.log('Order pending')
+    }
+}
+
+OrderStatus(Order.Delivered)
+```
